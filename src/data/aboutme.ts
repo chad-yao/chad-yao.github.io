@@ -18,22 +18,28 @@ export interface AboutMe {
 }
 
 export const aboutMe: AboutMe = {
-  name: "Jane R. Smith",
-  title: "Ph.D. Candidate",
-  institution: "Stanford University",
+  name: "Changwei (Chad) Yao",
+  title: "MASTER STUDENT",
+  institution: "Carnegie Mellon University",
   // Note that links work in the description
   description:
-    "I'm a final-year <a href='https://www.stanford.edu'>PhD candidate</a> working at the intersection of causal inference and machine learning. My research focuses on developing robust, interpretable systems that can reason about cause and effect in complex environments.",
-  email: "______@stanford.edu",
+    "I am a 2nd-year M.S. IS student at the Carnegie Mellon University, advised by Prof. Marios Savvides. Previously, I received B.E. in information security at CSEE of Hunan University, advised by Prof. Wenqiang Jin. I also spent one year to work with Prof. Wei Zhang in Control & Learning for Robotics and Autonomy Lab (CLEAR) at Southern University of Science and Technology." +
+
+    "Goal: Develop autonomous, intelligent robots that help human live better." +
+
+    "Interest: How to build a general, safe and intelligent robot-human interaction system for robots?",
+
+  funDescription: "I love hiking, traveling, and photography.",
+  email: "changwey@andrew.cmu.edu",
   imageUrl:
-    "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  googleScholarUrl: "https://scholar.google.com/citations?user=bWtMl_MAAAAJ",
-  githubUsername: "janesmith",
-  linkedinUsername: "janesmith",
-  twitterUsername: "janesmith",
-  blogUrl: "https://",
-  cvUrl: "https://",
-  institutionUrl: "https://www.stanford.edu",
+    "/images/selfy.jpeg",
+  googleScholarUrl: "https://scholar.google.com/citations?user=MHc5a8AAAAAJ&hl=en",
+  githubUsername: "chad-yao",
+  linkedinUsername: "changwei-yao-36815b212",
+  twitterUsername: "ChadRealrealyiu",
+  blogUrl: "www.chad-yao.com",
+  cvUrl: "/files/cv.pdf",
+  // institutionUrl: "https://www.stanford.edu",
   // altName: "",
   // secretDescription: "I like dogs.",
 };
