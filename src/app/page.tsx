@@ -12,10 +12,16 @@ import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
 import { ClientOnly } from "@/components/client-only";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFFCF8]">
+    <div className="min-h-screen bg-[#FFFCF8] dark:bg-neutral-900">
+      {/* Theme toggle button - fixed position in top right */}
+      <div className="fixed top-6 right-6 z-50">
+        <ThemeToggle />
+      </div>
+
       {/* Don't have a great call on whether max-w-screen-xl is better */}
       <div className="max-w-screen-lg mx-auto px-8 py-24">
         {/* Grid Layout */}
@@ -36,7 +42,7 @@ export default function Home() {
             {aboutMe.description && (
               <section>
                 <p
-                  className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600"
+                  className="font-serif text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 [&_a]:underline [&_a]:text-zinc-900 dark:[&_a]:text-zinc-100 [&_a:hover]:text-zinc-600 dark:[&_a:hover]:text-zinc-400"
                   dangerouslySetInnerHTML={{ __html: aboutMe.description }}
                   suppressHydrationWarning
                 />
@@ -52,7 +58,7 @@ export default function Home() {
                     return (
                       newsData.length > 0 && (
                         <section key={sectionName}>
-                          <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                          <h2 className="font-serif text-l mb-12 tracking-wide uppercase text-zinc-900 dark:text-zinc-100">
                             News
                           </h2>
                           <div className="space-y-12">
@@ -69,7 +75,7 @@ export default function Home() {
                     return (
                       educationData.length > 0 && (
                         <section key={sectionName}>
-                          <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                          <h2 className="font-serif text-zinc-700 dark:text-zinc-300 mb-12 tracking-wide uppercase">
                             Education
                           </h2>
                           <div className="space-y-12">
@@ -90,7 +96,7 @@ export default function Home() {
                     return (
                       experienceData.length > 0 && (
                         <section key={sectionName}>
-                          <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                          <h2 className="font-serif text-md mb-12 tracking-wide uppercase text-zinc-900 dark:text-zinc-100">
                             Experience
                           </h2>
                           <div className="space-y-12">
@@ -108,7 +114,7 @@ export default function Home() {
                     return (
                       portfolioData.length > 0 && (
                         <section key={sectionName}>
-                          <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                          <h2 className="font-serif text-md mb-12 tracking-wide uppercase text-zinc-900 dark:text-zinc-100">
                             Portfolio
                           </h2>
                           <div className="space-y-12">

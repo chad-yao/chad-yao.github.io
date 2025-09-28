@@ -32,8 +32,8 @@ export function ConferenceTag({ conference, year, className = "" }: ConferenceTa
         ${style.bg} ${style.text} ${style.border} border-r-0
         backdrop-blur-sm bg-opacity-90
         transform transition-all duration-500 ease-out
-        -translate-x-full group-hover:translate-x-0
-        opacity-0 group-hover:opacity-100
+        -translate-x-full
+        opacity-0
         ${className}
       `}
       style={{

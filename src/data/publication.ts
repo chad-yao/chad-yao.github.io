@@ -5,11 +5,14 @@ export interface Publication {
   authors: string;
   paperUrl?: string;
   codeUrl?: string;
+  websiteUrl?: string;
+  demoUrl?: string;
   bibtex?: string;
   tldr?: string;
   imageUrl?: string;
   award?: string;
   keywords?: string[];
+  highlight?: boolean; // Add highlight field to mark important publications
 }
 
 export const publicationData: Publication[] = [
@@ -20,6 +23,8 @@ export const publicationData: Publication[] = [
     title: "Reward Evolution with Graph-of-Thoughts: A Bi-Level Language Model Framework for Reinforcement Learning",
     authors: "Changwei Yao, Xinzi Liu, Chen Li, Marios Savvides",
     paperUrl: "https://arxiv.org/pdf/2509.16136",
+    // websiteUrl: "https://example.com/re-got",
+    // demoUrl: "https://demo.example.com/re-got",
     imageUrl: "/images/re-got.gif",
     keywords: ["GoT", "LLM", "RL"],
     // codeUrl: "https://github.com/jsmith/scalable-causal-discovery",
@@ -34,6 +39,7 @@ export const publicationData: Publication[] = [
     authors: "Qingyang Wang*, Changwei Yao*, Xingang Liu*, Zikai Ouyang, Junwei Liu, Haibo Lu, Wei Zhang",
     imageUrl: "/images/minInter.gif",
     keywords: ["Robot Learning", "Data Augmentation"],
+    // websiteUrl: "https://example.com/mininter",
     // paperUrl: "https://arxiv.org/abs/2302.13095",
     // codeUrl: "https://github.com/jsmith/robust-causal-discovery",
   },
@@ -44,6 +50,8 @@ export const publicationData: Publication[] = [
     authors: "Shibo Zhao, Guofei Chen, Honghao Zhu, Zhiheng Li, Changwei Yao, Nader Zantout, Seungchan Kim, Wenshan Wang, Ji Zhang, Sebastian Scherer",
     imageUrl: "/images/supermap.GIF",
     keywords: ["System", "Scene Graph", "Spatio-temporal"],
+    highlight: true, // Mark this as a highlighted publication
+    demoUrl: "https://www.youtube.com/watch?v=C0a_-AkIL6w",
     // paperUrl: "https://arxiv.org/abs/2302.13095",
     // codeUrl: "https://github.com/jsmith/robust-causal-discovery",
   },
