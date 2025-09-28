@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronDown, ChevronUp, Calendar, Award, Star } from "lucide-react";
 import { Publication } from "@/data/publication";
 
@@ -88,10 +89,9 @@ export function PublicationTimeline({ publications }: PublicationTimelineProps) 
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-zinc-200 dark:bg-zinc-700"></div>
 
         <div className="space-y-8">
-          {displayYears.map((year, yearIndex) => {
+          {displayYears.map((year) => {
             const yearPublications = groupedPublications[year];
             const isExpanded = expandedYears.has(year);
-            const isLastYear = yearIndex === displayYears.length - 1;
 
             return (
               <div key={year} className="relative">
@@ -197,10 +197,13 @@ export function PublicationTimeline({ publications }: PublicationTimelineProps) 
                           </div>
                           {publication.imageUrl && (
                             <div className="w-20 h-20 flex-shrink-0">
-                              <img
+                              <Image
                                 src={publication.imageUrl}
                                 alt={publication.title}
+                                width={80}
+                                height={80}
                                 className="w-full h-full object-cover rounded-lg transition-transform duration-500 ease-out hover:shadow-xl hover:scale-110 will-change-transform"
+                                unoptimized={publication.imageUrl.toLowerCase().endsWith('.gif')}
                               />
                             </div>
                           )}
