@@ -30,9 +30,48 @@ const ptSerif = PT_Serif({
 
 export const metadata: Metadata = {
   title: customMetadata.title || aboutMe.name,
-  description: customMetadata.description || aboutMe.description,
+  description: customMetadata.description || aboutMe.description.replace(/<[^>]*>/g, ''),
+  keywords: ['robotics', 'AI', 'machine learning', 'computer vision', 'autonomous systems', 'research', 'Carnegie Mellon University', 'PhD', 'graduate student'],
+  authors: [{ name: aboutMe.name }],
+  creator: aboutMe.name,
+  publisher: aboutMe.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.chad-yao.com',
+    siteName: aboutMe.name,
+    title: customMetadata.title || aboutMe.name,
+    description: customMetadata.description || aboutMe.description.replace(/<[^>]*>/g, ''),
+    images: [
+      {
+        url: aboutMe.imageUrl ? `https://www.chad-yao.com${aboutMe.imageUrl}` : 'https://www.chad-yao.com/images/selfy.jpeg',
+        width: 1200,
+        height: 630,
+        alt: aboutMe.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: customMetadata.title || aboutMe.name,
+    description: customMetadata.description || aboutMe.description.replace(/<[^>]*>/g, ''),
+    images: [aboutMe.imageUrl ? `https://www.chad-yao.com${aboutMe.imageUrl}` : 'https://www.chad-yao.com/images/selfy.jpeg'],
+    creator: aboutMe.twitterUsername ? `@${aboutMe.twitterUsername}` : undefined,
+  },
   icons: {
     icon: "/favicon.ico",
+  },
+  metadataBase: new URL('https://www.chad-yao.com'),
+  alternates: {
+    canonical: 'https://www.chad-yao.com',
   },
 };
 

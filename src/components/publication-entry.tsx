@@ -11,20 +11,22 @@ export function PublicationEntry({
   return (
     <div className={`flex flex-col sm:flex-row gap-6 ${publication.highlight ? 'bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 p-4 rounded-lg shadow-sm' : ''}`} suppressHydrationWarning>
       {publication.imageUrl && (
-        <div className="w-full sm:w-1/4 min-w-[160px] relative overflow-visible group">
-          <Image
-            src={publication.imageUrl}
-            alt={publication.title}
-            width={160}
-            height={200}
-            className="rounded-lg transition-transform duration-500 ease-out hover:shadow-xl hover:scale-110 will-change-transform"
-            unoptimized={publication.imageUrl.toLowerCase().endsWith('.gif')}
-          />
-          <ConferenceTag
-            conference={publication.conference}
-            year={publication.year}
-            className="group-hover:translate-x-0 group-hover:opacity-100"
-          />
+        <div className="w-full sm:w-1/4 min-w-[160px] relative overflow-visible">
+          <div className="group">
+            <Image
+              src={publication.imageUrl}
+              alt={publication.title}
+              width={160}
+              height={200}
+              className="rounded-lg transition-transform duration-500 ease-out hover:shadow-xl hover:scale-110 will-change-transform"
+              unoptimized={publication.imageUrl.toLowerCase().endsWith('.gif')}
+            />
+            <ConferenceTag
+              conference={publication.conference}
+              year={publication.year}
+              className="group-hover:translate-x-0 group-hover:opacity-100"
+            />
+          </div>
         </div>
       )}
       <div className="flex flex-col flex-1">
