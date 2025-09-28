@@ -1,5 +1,3 @@
-import { Publication } from "@/data/publication";
-
 interface ConferenceTagProps {
   conference: string;
   year: string;
