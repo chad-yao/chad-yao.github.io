@@ -37,6 +37,7 @@ export function ConferenceTag({ conference, year, className = "" }: ConferenceTa
         ${className}
       `}
       style={{
+        left: '-0.7rem',
         clipPath: 'polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%)',
         width: 'fit-content',
         minWidth: '60px'
