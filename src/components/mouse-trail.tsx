@@ -26,7 +26,7 @@ export function MouseTrail() {
   const [trailPoints, setTrailPoints] = useState<TrailPoint[]>([]);
   const [trailLines, setTrailLines] = useState<TrailLine[]>([]);
   const lastMousePos = useRef<{ x: number; y: number } | null>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
   const trailId = useRef(0);
 
   // Generate random colors
