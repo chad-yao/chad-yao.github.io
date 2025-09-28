@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Publication } from "@/data/publication";
+import { ConferenceTag } from "./conference-tag";
 
 export function PublicationEntry({
   publication,
@@ -10,15 +11,19 @@ export function PublicationEntry({
   return (
     <div className="flex flex-col sm:flex-row gap-6" suppressHydrationWarning>
       {publication.imageUrl && (
-        <div className="w-full sm:w-1/4 min-w-[160px] relative">
+        <div className="w-full sm:w-1/4 min-w-[160px] relative group">
           <Image
             src={publication.imageUrl}
             alt={publication.title}
             width={160}
             height={200}
-            className="rounded-lg transition-all duration-300"
+            className="rounded-lg transition-all duration-300 group-hover:shadow-lg"
             unoptimized={publication.imageUrl.toLowerCase().endsWith('.gif')}
             suppressHydrationWarning
+          />
+          <ConferenceTag
+            conference={publication.conference}
+            year={publication.year}
           />
         </div>
       )}
