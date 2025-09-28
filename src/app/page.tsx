@@ -11,6 +11,7 @@ import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
+import { ClientOnly } from "@/components/client-only";
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
           <div className="col-span-12 md:col-span-4 space-y-12 mb-8 md:mb-0">
             {/* Profile */}
             <div className="md:sticky top-12 space-y-8">
-              <ProfileSection aboutMe={aboutMe} />
+              <ClientOnly>
+                <ProfileSection aboutMe={aboutMe} />
+              </ClientOnly>
             </div>
           </div>
 
@@ -35,103 +38,106 @@ export default function Home() {
                 <p
                   className="font-serif text-sm leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600"
                   dangerouslySetInnerHTML={{ __html: aboutMe.description }}
+                  suppressHydrationWarning
                 />
               </section>
             )}
 
             {/* Map through sectionOrder to render sections in correct order */}
-            {sectionOrder.map((sectionName) => {
-              // Most of this is redundant... but in case it needs to be unique.
-              switch (sectionName) {
-                case Section.News:
-                  return (
-                    newsData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          News
-                        </h2>
-                        <div className="space-y-12">
-                          {newsData.map((news, index) => (
-                            <div key={index}>
-                              <NewsEntry news={news} />
-                            </div>
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
-                case Section.Education:
-                  return (
-                    educationData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
-                          Education
-                        </h2>
-                        <div className="space-y-12">
-                          {educationData.map((education, index) => (
-                            <EducationEntry key={index} education={education} />
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
-                case Section.Publication:
-                  return (
-                    publicationData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          Publications
-                        </h2>
-                        <div className="space-y-12">
-                          {publicationData.map((publication, index) => (
-                            <div key={index}>
-                              <PublicationEntry publication={publication} />
-                              {index < publicationData.length - 1 && (
-                                <div className="h-px bg-zinc-200 my-8" />
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
-                case Section.Experience:
-                  return (
-                    experienceData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
-                          Experience
-                        </h2>
-                        <div className="space-y-12">
-                          {experienceData.map((experience, index) => (
-                            <ExperienceEntry
-                              key={index}
-                              experience={experience}
-                            />
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
-                case Section.Portfolio:
-                  return (
-                    portfolioData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
-                          Portfolio
-                        </h2>
-                        <div className="space-y-12">
-                          {portfolioData.map((portfolio, index) => (
-                            <PortfolioEntry key={index} portfolio={portfolio} />
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
-                default:
-                  return null;
-              }
-            })}
+            <ClientOnly>
+              {sectionOrder.map((sectionName) => {
+                // Most of this is redundant... but in case it needs to be unique.
+                switch (sectionName) {
+                  case Section.News:
+                    return (
+                      newsData.length > 0 && (
+                        <section key={sectionName}>
+                          <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                            News
+                          </h2>
+                          <div className="space-y-12">
+                            {newsData.map((news, index) => (
+                              <div key={index}>
+                                <NewsEntry news={news} />
+                              </div>
+                            ))}
+                          </div>
+                        </section>
+                      )
+                    );
+                  case Section.Education:
+                    return (
+                      educationData.length > 0 && (
+                        <section key={sectionName}>
+                          <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                            Education
+                          </h2>
+                          <div className="space-y-12">
+                            {educationData.map((education, index) => (
+                              <EducationEntry key={index} education={education} />
+                            ))}
+                          </div>
+                        </section>
+                      )
+                    );
+                  case Section.Publication:
+                    return (
+                      publicationData.length > 0 && (
+                        <section key={sectionName}>
+                          <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                            Publications
+                          </h2>
+                          <div className="space-y-12">
+                            {publicationData.map((publication, index) => (
+                              <div key={index}>
+                                <PublicationEntry publication={publication} />
+                                {index < publicationData.length - 1 && (
+                                  <div className="h-px bg-zinc-200 my-8" />
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </section>
+                      )
+                    );
+                  case Section.Experience:
+                    return (
+                      experienceData.length > 0 && (
+                        <section key={sectionName}>
+                          <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                            Experience
+                          </h2>
+                          <div className="space-y-12">
+                            {experienceData.map((experience, index) => (
+                              <ExperienceEntry
+                                key={index}
+                                experience={experience}
+                              />
+                            ))}
+                          </div>
+                        </section>
+                      )
+                    );
+                  case Section.Portfolio:
+                    return (
+                      portfolioData.length > 0 && (
+                        <section key={sectionName}>
+                          <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                            Portfolio
+                          </h2>
+                          <div className="space-y-12">
+                            {portfolioData.map((portfolio, index) => (
+                              <PortfolioEntry key={index} portfolio={portfolio} />
+                            ))}
+                          </div>
+                        </section>
+                      )
+                    );
+                  default:
+                    return null;
+                }
+              })}
+            </ClientOnly>
           </div>
         </div>
       </div>

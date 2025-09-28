@@ -8,7 +8,7 @@ export function PublicationEntry({
   publication: Publication;
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6">
+    <div className="flex flex-col sm:flex-row gap-6" suppressHydrationWarning>
       {publication.imageUrl && (
         <div className="w-full sm:w-1/4 min-w-[160px] relative">
           <Image
@@ -17,6 +17,8 @@ export function PublicationEntry({
             width={160}
             height={200}
             className="rounded-lg transition-all duration-300"
+            unoptimized={publication.imageUrl.toLowerCase().endsWith('.gif')}
+            suppressHydrationWarning
           />
         </div>
       )}
@@ -74,6 +76,20 @@ export function PublicationEntry({
             </a>
           )}
         </div>
+        {publication.keywords && publication.keywords.length > 0 && (
+          <div className="mt-4">
+            <div className="flex flex-wrap gap-2">
+              {publication.keywords.map((keyword, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 text-xs bg-zinc-100 text-zinc-700 rounded-md border border-zinc-200"
+                >
+                  {keyword}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
         {publication.tldr && (
           <p className="text-sm italic text-zinc-600 mt-4">
             {publication.tldr}

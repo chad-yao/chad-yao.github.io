@@ -39,9 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased`}
+        suppressHydrationWarning
       >
         <main className="">{children}</main>
         <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8]">

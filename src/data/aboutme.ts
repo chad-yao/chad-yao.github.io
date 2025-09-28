@@ -23,11 +23,9 @@ export const aboutMe: AboutMe = {
   institution: "Carnegie Mellon University",
   // Note that links work in the description
   description:
-    "I am a 2nd-year M.S. IS student at the Carnegie Mellon University, advised by Prof. Marios Savvides. Previously, I received B.E. in information security at CSEE of Hunan University, advised by Prof. Wenqiang Jin. I also spent one year to work with Prof. Wei Zhang in Control & Learning for Robotics and Autonomy Lab (CLEAR) at Southern University of Science and Technology." +
-
-    "Goal: Develop autonomous, intelligent robots that help human live better." +
-
-    "Interest: How to build a general, safe and intelligent robot-human interaction system for robots?",
+    "I am a Master student in Information System at Carnegie Mellon University, advised by <a href='https://www.ece.cmu.edu/directory/bios/savvides-marios.html' target='_blank'>Prof. Marios Savvides</a> and <a href='https://www.ri.cmu.edu/ri-faculty/ji-zhang/' target='_blank'>Prof. Ji Zhang</a>. Currently, my research interests mainly focus on <strong style='color: red;'>buildingautonomous, intelligent, general-purpose robots</strong> to help human live better. And I am also exploring how to design a safer robot-human interaction system.<br><br>" +
+    "Previously, I received my bachelor degree from CSEE, Hunan University, advised by <a href='https://scholar.google.com/citations?user=VLoDl_UAAAAJ&hl=en' target='_blank'>Prof. Wenqiang Jin</a>. I also spent one year to work with <a href='https://scholar.google.com/citations?user=HQ6j-KsAAAAJ&hl=en' target='_blank'>Prof. Wei Zhang</a> in Control & Learning for Robotics and Autonomy Lab at Southern University of Science and Technology.<br><br>" +
+    "<strong style='color: red;'>I am actively seeking PhD opportunities to further advance my research in robotics and AI. Welcome to reach out to me!</strong>",
 
   funDescription: "I love hiking, traveling, and photography.",
   email: "changwey@andrew.cmu.edu",

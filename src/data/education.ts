@@ -12,7 +12,7 @@ export const educationData: Education[] = [
   {
     year: "2024—Present",
     institution: "Carnegie Mellon University",
-    degree: "M.S. in Computer Science",
+    degree: "M.S. in Information System",
     advisor: "Prof. Marios Savvides",
   },
   {

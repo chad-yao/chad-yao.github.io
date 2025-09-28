@@ -8,15 +8,30 @@ export interface Portfolio {
 }
 
 export const portfolioData: Portfolio[] = [
-  // Example entry
   {
-    title: "Causal Discovery Framework",
+    title: "Airport Chatbot Assistant",
     description:
-      "A framework for discovering causal relationships in high-dimensional time series data using state-of-the-art machine learning techniques.",
-    technologies: ["Python", "PyTorch", "React"],
-    projectUrl: "https://project-demo.com",
+      "An intelligent chatbot designed to assist passengers with airport-related queries including flight information, terminal navigation, entertainment, and general airport services.",
+    technologies: ["Python", "API Integration"],
+    // imageUrl: "/images/chatbot.png",
+    codeUrl: "https://github.com/CMU-Cylab-Biometrics-Center/nexus",
+  },
+  {
+    title: "DRL Tree Chopping Agent for Minecraft",
+    description:
+      "A deep reinforcement learning agent trained to chop trees in Minecraft using Deep Q-learning from demonstration.",
+    technologies: ["Python", "PyTorch", "MineRL"],
+    imageUrl: "/images/treechopper.gif",
+    codeUrl: "https://github.com/chad-yao/DRL-for-Minecraft",
+  },
+  {
+    title: "KUKA Teleoperation Tool",
+    description:
+      "A tool for teleoperating KUKA robots using a spacemouse in both real world and simulation.",
+    technologies: ["Python", "ROS"],
+    // projectUrl: "https://github.com/chad-yao/KUKA-Controller",
     imageUrl:
-      "https://images.unsplash.com/photo-1561622539-dffbfc2008fd?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    codeUrl: "https://github.com/username/project",
+      "/images/kuka.gif",
+    codeUrl: "https://github.com/chad-yao/KUKA-Controller",
   },
 ];
