@@ -13,6 +13,7 @@ import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
 import { ClientOnly } from "@/components/client-only";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { ModernNavigation } from "@/components/modern-navigation";
 
 export default function Home() {
   return (
@@ -21,6 +22,11 @@ export default function Home() {
       <div className="fixed top-6 right-6 z-50">
         <ThemeToggle />
       </div>
+
+      {/* Modern Navigation - fixed position on right side */}
+      <ClientOnly>
+        <ModernNavigation sections={sectionOrder} />
+      </ClientOnly>
 
       {/* Don't have a great call on whether max-w-screen-xl is better */}
       <div className="max-w-screen-lg mx-auto px-8 py-24">
@@ -57,7 +63,7 @@ export default function Home() {
                   case Section.News:
                     return (
                       newsData.length > 0 && (
-                        <section key={sectionName}>
+                        <section key={sectionName} data-section={sectionName}>
                           <h2 className="font-serif text-l mb-12 tracking-wide uppercase text-zinc-900 dark:text-zinc-100">
                             News
                           </h2>
@@ -74,7 +80,7 @@ export default function Home() {
                   case Section.Education:
                     return (
                       educationData.length > 0 && (
-                        <section key={sectionName}>
+                        <section key={sectionName} data-section={sectionName}>
                           <h2 className="font-serif text-zinc-700 dark:text-zinc-300 mb-12 tracking-wide uppercase">
                             Education
                           </h2>
@@ -89,13 +95,15 @@ export default function Home() {
                   case Section.Publication:
                     return (
                       publicationData.length > 0 && (
-                        <PublicationSection key={sectionName} publications={publicationData} />
+                        <div key={sectionName} data-section={sectionName}>
+                          <PublicationSection publications={publicationData} />
+                        </div>
                       )
                     );
                   case Section.Experience:
                     return (
                       experienceData.length > 0 && (
-                        <section key={sectionName}>
+                        <section key={sectionName} data-section={sectionName}>
                           <h2 className="font-serif text-md mb-12 tracking-wide uppercase text-zinc-900 dark:text-zinc-100">
                             Experience
                           </h2>
@@ -113,7 +121,7 @@ export default function Home() {
                   case Section.Portfolio:
                     return (
                       portfolioData.length > 0 && (
-                        <section key={sectionName}>
+                        <section key={sectionName} data-section={sectionName}>
                           <h2 className="font-serif text-md mb-12 tracking-wide uppercase text-zinc-900 dark:text-zinc-100">
                             Portfolio
                           </h2>

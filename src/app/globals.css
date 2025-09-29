@@ -10,18 +10,18 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--source-serif-font), Georgia, serif;
+  /* Use Raleway as the primary font family - an elegant sans-serif with sophisticated appearance */
+  font-family: var(--font-raleway), system-ui, sans-serif;
 }
 
-/* Elements marked with serif class or font-serif will use Source Serif */
+/* Elements marked with serif class or font-serif will use Raleway with serif fallbacks */
 .font-serif,
 .serif {
-  font-family: ui-serif, var(--font-pt-serif), var(--font-noto-serif), Georgia,
-    serif;
+  font-family: var(--font-raleway), ui-serif, Georgia, serif;
 }
 
-/* Elements marked with sans or font-sans will use Geist */
+/* Elements marked with sans or font-sans will use Raleway */
 .font-sans,
 .sans {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-raleway), system-ui, sans-serif;
 }

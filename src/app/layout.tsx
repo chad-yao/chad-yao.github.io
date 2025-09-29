@@ -1,31 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif, PT_Serif } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
 import { AdvancedMouseEffects } from "@/components/advanced-mouse-effects";
 import { MouseTrail } from "@/components/mouse-trail";
 import { ThemeProvider } from "@/components/theme-provider";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Configure Raleway font from Google Fonts
+// Raleway is an elegant sans-serif typeface designed for both display and text use
+// It features a modern, sophisticated appearance with excellent readability perfect for academic websites
+const ralewayFont = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
-});
-
-const notoSerif = Noto_Serif({
-  variable: "--font-noto-serif",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const ptSerif = PT_Serif({
-  variable: "--font-pt-serif",
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -83,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased`}
+        className={`${ralewayFont.variable} antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider
