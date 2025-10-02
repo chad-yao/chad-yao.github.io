@@ -24,7 +24,7 @@ interface Particle {
 
 export function SpaceBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
   const starsRef = useRef<Star[]>([]);
   const particlesRef = useRef<Particle[]>([]);
   const lastTimeRef = useRef<number>(0);
