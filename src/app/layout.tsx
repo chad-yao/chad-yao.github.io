@@ -6,6 +6,7 @@ import { customMetadata } from "@/data/title-description";
 import { AdvancedMouseEffects } from "@/components/advanced-mouse-effects";
 import { MouseTrail } from "@/components/mouse-trail";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpaceBackground } from "@/components/space-background";
 
 // Configure Raleway font from Google Fonts
 // Raleway is an elegant sans-serif typeface designed for both display and text use
@@ -80,10 +81,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SpaceBackground />
           <AdvancedMouseEffects />
           <MouseTrail />
-          <main className="">{children}</main>
-        <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8] dark:bg-neutral-900">
+          <main className="content-above-space">{children}</main>
+        <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8] dark:bg-neutral-900/80 backdrop-blur-sm">
           <div className="flex flex-row mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between ">
             <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
               <p>

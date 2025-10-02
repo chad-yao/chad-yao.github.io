@@ -17,7 +17,7 @@ import { ModernNavigation } from "@/components/modern-navigation";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFFCF8] dark:bg-neutral-900">
+    <div className="min-h-screen bg-[#FFFCF8] dark:bg-transparent">
       {/* Theme toggle button - fixed position in top right */}
       <div className="fixed top-6 right-6 z-50">
         <ThemeToggle />
