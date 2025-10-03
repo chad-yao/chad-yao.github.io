@@ -400,14 +400,8 @@ export function SpaceBackground() {
   return (
     <div
       ref={mountRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{
-        background: `
-          radial-gradient(ellipse at center, #0a0a0a 0%, #080810 20%, #050510 40%, #020208 70%, #000000 100%),
-          linear-gradient(135deg, #0a0a0a 0%, #0f0f15 30%, #0a0a0f 60%, #050508 100%),
-          linear-gradient(45deg, #000000 0%, #0a0a0a 50%, #000000 100%)
-        `
-      }}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0 space-background-gradient"
+      suppressHydrationWarning={true}
     />
   );
 }
