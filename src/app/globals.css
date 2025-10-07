@@ -12,6 +12,8 @@ body {
   background: var(--background);
   /* Use Raleway as the primary font family - an elegant sans-serif with sophisticated appearance */
   font-family: var(--font-raleway), system-ui, sans-serif;
+  /* Make all text fully justified */
+  text-align: justify;
 }
 
 /* Elements marked with serif class or font-serif will use Raleway with serif fallbacks */
