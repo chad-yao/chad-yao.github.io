@@ -8,6 +8,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { AboutMe } from "@/data/aboutme";
+import { HoverName } from "./hover-name";
 
 interface ProfileSectionProps {
   aboutMe: AboutMe;
@@ -34,8 +35,15 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
         </div>
       )}
       <div className="w-2/3 md:w-full">
-        <h1 className="font-serif text-3xl font-light tracking-wide mb-3 text-zinc-900 dark:text-zinc-100">
-          {aboutMe.name}
+        <h1 className="font-serif text-3xl font-light tracking-wide mb-3 text-zinc-900 dark:text-zinc-100 relative">
+          {aboutMe.chineseName ? (
+            <HoverName
+              englishName={aboutMe.name}
+              chineseName={aboutMe.chineseName}
+            />
+          ) : (
+            aboutMe.name
+          )}
         </h1>
         {aboutMe.altName && (
           <p className="text-zinc-600 dark:text-zinc-400 text-md leading-relaxed tracking-wide mb-6">

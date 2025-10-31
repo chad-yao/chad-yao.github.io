@@ -14,10 +14,9 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        // Configure Raleway as the primary font family for Tailwind classes
-        // Raleway is an elegant sans-serif typeface with sophisticated appearance
-        sans: ["var(--font-raleway)", "system-ui", "sans-serif"],
-        serif: ["var(--font-raleway)", "ui-serif", "Georgia", "serif"],
+        // Use Palatino (system serif) across Tailwind font utilities
+        sans: ["Palatino Linotype", "Book Antiqua", "Palatino", "serif"],
+        serif: ["Palatino Linotype", "Book Antiqua", "Palatino", "serif"],
       },
     },
   },

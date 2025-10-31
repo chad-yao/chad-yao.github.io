@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
@@ -8,14 +7,7 @@ import { MouseTrail } from "@/components/mouse-trail";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpaceBackground } from "@/components/space-background";
 
-// Configure Raleway font from Google Fonts
-// Raleway is an elegant sans-serif typeface designed for both display and text use
-// It features a modern, sophisticated appearance with excellent readability perfect for academic websites
-const ralewayFont = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+// Using system Palatino via CSS; no Google Fonts loaded
 
 export const metadata: Metadata = {
   title: customMetadata.title || aboutMe.name,
@@ -72,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${ralewayFont.variable} antialiased`}
+        className={`antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider
