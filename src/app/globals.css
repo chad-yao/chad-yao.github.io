@@ -12,8 +12,10 @@ body {
   background: var(--background);
   /* Use Palatino (system serif) as the primary font family */
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  /* Make all text fully justified */
+  /* Make all text fully justified with LaTeX-like quality */
   text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 /* Elements marked with serif class or font-serif will use Raleway with serif fallbacks */
