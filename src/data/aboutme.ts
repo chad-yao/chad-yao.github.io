@@ -36,7 +36,7 @@ export const aboutMe: AboutMe = {
   googleScholarUrl: "https://scholar.google.com/citations?user=MHc5a8AAAAAJ&hl=en",
   githubUsername: "chad-yao",
   linkedinUsername: "changwei-yao-36815b212",
-  twitterUsername: "ChadRealrealyiu",
+  twitterUsername: "changweiyao77",
   blogUrl: "www.chad-yao.com",
   cvUrl: "/files/cv.pdf",
   // institutionUrl: "https://www.stanford.edu",
