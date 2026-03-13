@@ -34,4 +34,13 @@ export const portfolioData: Portfolio[] = [
       "/images/kuka.gif",
     codeUrl: "https://github.com/chad-yao/KUKA-Controller",
   },
+  {
+    title: "HiWE: Hierarchical Waypoint Extraction",
+    description:
+      "A data preprocessing toolkit for imitation learning that segments demonstrations into key intervals, extracts hierarchical waypoints, and relabels actions to improve downstream policy success rates.",
+    technologies: ["Imitation Learning", "Robotics"],
+    imageUrl: "/images/clear_ssl_hwe.gif",
+    codeUrl: "https://github.com/chad-yao/HiWE",
+    // projectUrl: "https://github.com/chad-yao/HiWE",
+  },
 ];

@@ -18,8 +18,8 @@ export interface Publication {
 export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
   {
-    year: "2025",
-    conference: "In Submission",
+    year: "2026",
+    conference: "ICRA",
     title: "Reward Evolution with Graph-of-Thoughts: A Bi-Level Language Model Framework for Reinforcement Learning",
     authors: "Changwei Yao, Xinzi Liu, Chen Li, Marios Savvides",
     paperUrl: "https://arxiv.org/pdf/2509.16136",
@@ -33,7 +33,7 @@ export const publicationData: Publication[] = [
     // award: "🏆 Best Paper Award",
   },
   {
-    year: "2025",
+    year: "2026",
     conference: "In Submission",
     title: "MinInter: Minimizing Trajectory Interpolation During Data Augmentation for Imitation Learning",
     authors: "Qingyang Wang*, Changwei Yao*, Xingang Liu*, Zikai Ouyang, Junwei Liu, Haibo Lu, Wei Zhang",
@@ -44,7 +44,7 @@ export const publicationData: Publication[] = [
     // codeUrl: "https://github.com/jsmith/robust-causal-discovery",
   },
   {
-    year: "2025",
+    year: "2026",
     conference: "In Submission",
     title: "SuperMap: Spatio Temporal Semantic SLAM Enabling Robots to Understand Evolving World in Real Time",
     authors: "Shibo Zhao, Guofei Chen, Honghao Zhu, Zhiheng Li, Changwei Yao, Nader Zantout, Seungchan Kim, Wenshan Wang, Ji Zhang, Sebastian Scherer",

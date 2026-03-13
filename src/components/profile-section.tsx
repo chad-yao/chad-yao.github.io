@@ -155,9 +155,10 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
                 className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                title={`linkedin.com/in/${aboutMe.linkedinUsername}`}
               >
                 <Linkedin size={14} />
-                linkedin.com/in/{aboutMe.linkedinUsername}
+                {aboutMe.linkedinUsername}
               </a>
             </>
           )}

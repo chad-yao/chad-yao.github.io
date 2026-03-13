@@ -47,7 +47,7 @@ export function ConferenceTag({ conference, year, className = "" }: ConferenceTa
         <span className="text-[10px] font-bold tracking-wide">
           {conference}
         </span>
-        <span className="text-[9px] opacity-90">
+        <span className="text-[11px] font-semibold opacity-90">
           {year}
         </span>
       </div>
