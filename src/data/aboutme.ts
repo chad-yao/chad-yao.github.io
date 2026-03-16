@@ -26,8 +26,8 @@ export const aboutMe: AboutMe = {
   // Note that links work in the description
   description:
     "I am a Master student in Information System at Carnegie Mellon University, advised by <a href='https://www.ece.cmu.edu/directory/bios/savvides-marios.html' target='_blank'>Prof. Marios Savvides</a>. Previously, I was also fortunate to work with <a href='https://www.ri.cmu.edu/ri-faculty/ji-zhang/' target='_blank'>Prof. Ji Zhang</a> in the Robotics Institute. Currently, my research interests mainly focus on <strong style='color: red;'>building autonomous, intelligent, general-purpose robots</strong> to help human live better. And I am also exploring how to design a safer robot-human interaction system.<br><br>" +
-    "Previously, I received my bachelor degree from CSEE, Hunan University, advised by <a href='https://scholar.google.com/citations?user=VLoDl_UAAAAJ&hl=en' target='_blank'>Prof. Wenqiang Jin</a>. I also spent one year to work with <a href='https://scholar.google.com/citations?user=HQ6j-KsAAAAJ&hl=en' target='_blank'>Prof. Wei Zhang</a> in Control & Learning for Robotics and Autonomy Lab at Southern University of Science and Technology.<br><br>" +
-    "<strong style='color: red;'>I am actively seeking PhD opportunities to further advance my research in robotics and AI. Welcome to reach out to me!</strong>",
+    "Previously, I received my bachelor degree from CSEE, Hunan University, advised by <a href='https://scholar.google.com/citations?user=VLoDl_UAAAAJ&hl=en' target='_blank'>Prof. Wenqiang Jin</a>. I also spent one year to work with <a href='https://scholar.google.com/citations?user=HQ6j-KsAAAAJ&hl=en' target='_blank'>Prof. Wei Zhang</a> in Control & Learning for Robotics and Autonomy Lab at Southern University of Science and Technology.<br><br>",
+    // "<strong style='color: red;'>I am actively seeking PhD opportunities to further advance my research in robotics and AI. Welcome to reach out to me!</strong>",
 
   funDescription: "I love hiking, traveling, and photography.",
   email: "changwey@andrew.cmu.edu",
