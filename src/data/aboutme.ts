@@ -8,6 +8,7 @@ export interface AboutMe {
   imageUrl?: string;
   blogUrl?: string;
   cvUrl?: string;
+  resumeUrl?: string;
   googleScholarUrl?: string;
   twitterUsername?: string;
   githubUsername?: string;
@@ -39,6 +40,7 @@ export const aboutMe: AboutMe = {
   twitterUsername: "changweiyao77",
   blogUrl: "www.chad-yao.com",
   cvUrl: "/files/cv.pdf",
+  resumeUrl: "/files/resume.pdf",
   // institutionUrl: "https://www.stanford.edu",
   // altName: "",
   // secretDescription: "I like dogs.",

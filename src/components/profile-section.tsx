@@ -95,6 +95,20 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               <span className="tracking-wider uppercase">CV</span>
             </a>
           )}
+          {aboutMe.resumeUrl && (
+            <a
+              href={aboutMe.resumeUrl}
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ArrowUpRight
+                size={12}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+              />
+              <span className="tracking-wider uppercase">Resume</span>
+            </a>
+          )}
         </div>
         <div className="space-y-2">
           <a
