@@ -38,7 +38,7 @@ export const aboutMe: AboutMe = {
   githubUsername: "chad-yao",
   linkedinUsername: "changwei-yao-36815b212",
   twitterUsername: "changweiyao77",
-  blogUrl: "www.chad-yao.com",
+  blogUrl: "https://www.chad-yao.com",
   cvUrl: "/files/cv.pdf",
   resumeUrl: "/files/resume.pdf",
   // institutionUrl: "https://www.stanford.edu",
