@@ -9,12 +9,12 @@ export interface Portfolio {
 
 export const portfolioData: Portfolio[] = [
   {
-    title: "Airport Chatbot Assistant",
+    title: "Monocular 4D Human Reconstruction",
     description:
-      "An intelligent chatbot designed to assist passengers with airport-related queries including flight information, terminal navigation, entertainment, and general airport services.",
-    technologies: ["Python", "API Integration"],
-    // imageUrl: "/images/chatbot.png",
-    codeUrl: "https://github.com/CMU-Cylab-Biometrics-Center/nexus",
+      "Extended Shape-of-Motion with synthesized views and MHR tracking priors to improve monocular human reconstruction under fast motion, yielding more stable limbs, better foreground quality, and faster preprocessing.",
+    technologies: ["Python", "Gaussian Splatting", "SAM 3D"],
+    imageUrl: "/som_sambody3d/merged/motion_coefs_stacked_x2_colorfirst.gif",
+    projectUrl: "/som_sambody3d",
   },
   {
     title: "DRL Tree Chopping Agent for Minecraft",
