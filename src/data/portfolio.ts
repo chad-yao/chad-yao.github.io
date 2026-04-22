@@ -9,6 +9,14 @@ export interface Portfolio {
 
 export const portfolioData: Portfolio[] = [
   {
+    title: "WBC2Policy: Whole-Body Mobile Manipulation",
+    description:
+      "Learn a whole-body mobile manipulation policy using depth and Lidar sensors, without any expert demonstrations.",
+    technologies: ["Robot Learning", "Mobile Manipulation", "Whole-Body Control"],
+    imageUrl: "/wbc2policy/demo_preview_fast.gif",
+    projectUrl: "/wbc2policy",
+  },
+  {
     title: "Monocular 4D Human Reconstruction",
     description:
       "Extended Shape-of-Motion with synthesized views and MHR tracking priors to improve monocular human reconstruction under fast motion, yielding more stable limbs, better foreground quality, and faster preprocessing.",

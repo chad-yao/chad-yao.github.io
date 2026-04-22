@@ -23,9 +23,6 @@ export default function SomSambody3DPage() {
       <div className="mx-auto flex max-w-5xl flex-col gap-16 px-6 pb-24 pt-16 md:px-8 md:pt-20">
         {/* Hero */}
         <header className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">
-            Project Page
-          </p>
           <h1 className="font-serif text-3xl leading-snug text-zinc-900 dark:text-zinc-50 md:text-4xl">
             Completing Dynamic Human Reconstruction with{" "}
             <span className="whitespace-nowrap">I2V-Synthesized</span> Views
@@ -40,15 +37,38 @@ export default function SomSambody3DPage() {
           <div className="flex flex-wrap gap-3 pt-2 text-xs">
             <Link
               href="/som_sambody3d/project_report.pdf"
-              className="rounded-full border border-zinc-300 bg-white/80 px-4 py-2 text-xs font-medium text-zinc-900 shadow-sm transition hover:border-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-50 dark:hover:border-zinc-200 dark:hover:bg-zinc-800"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white/80 px-4 py-2 text-xs font-medium text-zinc-900 shadow-sm transition hover:border-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-50 dark:hover:border-zinc-200 dark:hover:bg-zinc-800"
             >
+              <span aria-hidden="true" className="inline-flex h-4 w-4 items-center justify-center">
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
+                  <path
+                    d="M7 3.5h7l4 4V20a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 20V5A1.5 1.5 0 0 1 7.5 3.5Z"
+                    fill="#EF4444"
+                  />
+                  <path d="M14 3.5v4h4" fill="#FCA5A5" />
+                  <path
+                    d="M9 15.25h6M9 18h4.5"
+                    stroke="white"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
               Paper (PDF)
             </Link>
             <Link
               href="https://github.com/chad-yao"
-              className="rounded-full border border-transparent bg-zinc-900 px-4 py-2 text-xs font-medium text-zinc-50 shadow-sm transition hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white/80 px-4 py-2 text-xs font-medium text-zinc-900 shadow-sm transition hover:border-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-50 dark:hover:border-zinc-200 dark:hover:bg-zinc-800"
             >
-              Code (coming soon)
+              <span aria-hidden="true" className="inline-flex h-4 w-4 items-center justify-center">
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
+                  <path
+                    d="M12 2.75a9.25 9.25 0 0 0-2.93 18.02c.46.09.63-.2.63-.45 0-.22-.01-.95-.01-1.72-2.31.42-2.91-.57-3.1-1.1-.11-.27-.56-1.11-.96-1.33-.33-.18-.8-.62-.01-.63.74-.01 1.27.68 1.45.96.84 1.4 2.18 1 2.71.76.09-.61.33-1.01.6-1.24-2.05-.23-4.19-1.03-4.19-4.58 0-1.01.36-1.83.95-2.48-.1-.23-.42-1.18.09-2.45 0 0 .78-.25 2.55.95a8.7 8.7 0 0 1 4.64 0c1.77-1.21 2.55-.95 2.55-.95.51 1.27.19 2.22.09 2.45.59.65.95 1.46.95 2.48 0 3.56-2.15 4.35-4.2 4.58.34.29.63.84.63 1.7 0 1.23-.01 2.22-.01 2.52 0 .25.17.55.63.45A9.25 9.25 0 0 0 12 2.75Z"
+                    fill="#18181B"
+                  />
+                </svg>
+              </span>
+              GitHub
             </Link>
           </div>
         </header>
