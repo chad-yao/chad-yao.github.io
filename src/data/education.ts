@@ -2,6 +2,7 @@ export interface Education {
   year: string;
   institution: string;
   degree: string;
+  logoUrl?: string;
   advisor?: string;
   thesis?: string;
   thesisUrl?: string;
@@ -13,12 +14,14 @@ export const educationData: Education[] = [
     year: "2024—Present",
     institution: "Carnegie Mellon University",
     degree: "M.S. in Information System",
+    logoUrl: "/education/cmu.png",
     advisor: "Prof. Marios Savvides",
   },
   {
     year: "2019—2023",
     institution: "Hunan University",
     degree: "B.E. in Information Security",
+    logoUrl: "/education/hunan.png",
     // thesis: "Algorithmic Approaches to Causal Discovery",
     // Optional links to thesis
     // thesisUrl: "https://dspace.mit.edu/handle/1721.1/149111"
