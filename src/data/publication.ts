@@ -45,7 +45,7 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2026",
-    conference: "In Submission",
+    conference: "RSS",
     title: "SuperMap: Spatio Temporal Semantic SLAM Enabling Robots to Understand Evolving World in Real Time",
     authors: "Shibo Zhao, Guofei Chen, Honghao Zhu, Zhiheng Li, Changwei Yao, Nader Zantout, Seungchan Kim, Wenshan Wang, Ji Zhang, Sebastian Scherer",
     imageUrl: "/images/supermap.GIF",

@@ -11,7 +11,7 @@ const conferenceStyles: Record<string, { bg: string; text: string; border: strin
   "NeurIPS": { bg: "bg-green-500", text: "text-white", border: "border-green-600" },
   "ICML": { bg: "bg-orange-500", text: "text-white", border: "border-orange-600" },
   "ICLR": { bg: "bg-pink-500", text: "text-white", border: "border-pink-600" },
-  "AAAI": { bg: "bg-indigo-500", text: "text-white", border: "border-indigo-600" },
+  "RSS": { bg: "bg-indigo-500", text: "text-white", border: "border-indigo-600" },
   "IJCAI": { bg: "bg-teal-500", text: "text-white", border: "border-teal-600" },
   "In Submission": { bg: "bg-gray-500", text: "text-white", border: "border-gray-600" },
   "ArXiv": { bg: "bg-yellow-500", text: "text-black", border: "border-yellow-600" },

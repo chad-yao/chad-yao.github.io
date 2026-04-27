@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight, Star } from "lucide-react";
 import { Publication } from "@/data/publication";
 import { ConferenceTag } from "./conference-tag";
+import { ShineBorder } from "./shine-border";
 
 export function PublicationEntry({
   publication,
@@ -9,7 +10,20 @@ export function PublicationEntry({
   publication: Publication;
 }) {
   return (
-    <div className={`flex flex-col sm:flex-row gap-6 ${publication.highlight ? 'bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 p-4 rounded-lg shadow-sm' : ''}`} suppressHydrationWarning>
+    <div className={`flex flex-col sm:flex-row gap-6 ${publication.highlight ? 'relative overflow-hidden bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 p-4 rounded-lg shadow-sm border border-orange-200/70 dark:border-orange-700/50' : ''}`} suppressHydrationWarning>
+      {publication.highlight && (
+        <>
+          <ShineBorder
+            borderWidth={2}
+            duration={10}
+            shineColor={["#f97316", "#facc15", "#fb7185"]}
+          />
+          <div className="absolute bottom-2 left-2 z-10 flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-orange-900/30 dark:to-amber-900/30 rounded-md border border-orange-200 dark:border-orange-700 shadow-sm">
+            <Star size={12} className="text-orange-600 dark:text-orange-400 fill-current" />
+            <span className="text-xs text-orange-700 dark:text-orange-300 font-medium">Featured</span>
+          </div>
+        </>
+      )}
       {publication.imageUrl && (
         <div className="w-full sm:w-1/4 min-w-[160px] relative overflow-visible">
           <div className="group">
@@ -34,12 +48,6 @@ export function PublicationEntry({
           <p className="text-xs text-zinc-500 dark:text-zinc-500">
             {publication.conference} {publication.year}
           </p>
-          {publication.highlight && (
-            <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-orange-900/30 dark:to-amber-900/30 rounded-md border border-orange-200 dark:border-orange-700">
-              <Star size={12} className="text-orange-600 dark:text-orange-400 fill-current" />
-              <span className="text-xs text-orange-700 dark:text-orange-300 font-medium">Featured</span>
-            </div>
-          )}
           {publication.award && (
             <div className="group flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 rounded-md items-center shadow-md border border-amber-100/50 relative overflow-hidden hover:rotate-1 transition-all duration-300">
               <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/90 to-transparent" />

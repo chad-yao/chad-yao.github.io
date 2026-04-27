@@ -5,6 +5,7 @@ export interface Portfolio {
   imageUrl?: string;
   projectUrl?: string;
   codeUrl?: string;
+  highlight?: boolean;
 }
 
 export const portfolioData: Portfolio[] = [
@@ -15,6 +16,7 @@ export const portfolioData: Portfolio[] = [
     technologies: ["Robot Learning", "Mobile Manipulation", "Whole-Body Control"],
     imageUrl: "/wbc2policy/demo_preview_fast.gif",
     projectUrl: "/wbc2policy",
+    highlight: true,
   },
   {
     title: "Monocular 4D Human Reconstruction",

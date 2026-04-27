@@ -71,6 +71,15 @@ body {
   }
 }
 
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 300% 300%;
+  }
+}
+
 /* Space background container */
 .space-background {
   position: fixed;

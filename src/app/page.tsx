@@ -28,8 +28,8 @@ export default function Home() {
         <ModernNavigation sections={sectionOrder} />
       </ClientOnly>
 
-      {/* Don't have a great call on whether max-w-screen-xl is better */}
-      <div className="max-w-screen-lg mx-auto px-8 py-24">
+      {/* Page width is controlled here. max-w-7xl keeps wide screens from feeling too narrow. */}
+      <div className="max-w-7xl mx-auto px-6 py-24 md:px-8">
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Left Column - Fixed Info */}
