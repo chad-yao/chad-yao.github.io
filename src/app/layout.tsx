@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "react-vertical-timeline-component/style.min.css";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
