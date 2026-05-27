@@ -34,7 +34,7 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2026",
-    conference: "In Submission",
+    conference: "CASE",
     title: "MinInter: Minimizing Trajectory Interpolation During Data Augmentation for Imitation Learning",
     authors: "Qingyang Wang*, Changwei Yao*, Xingang Liu*, Zikai Ouyang, Junwei Liu, Haibo Lu, Wei Zhang",
     imageUrl: "/images/minInter.gif",
