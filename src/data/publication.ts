@@ -52,6 +52,7 @@ export const publicationData: Publication[] = [
     keywords: ["System", "Scene Graph", "Spatio-temporal"],
     highlight: true, // Mark this as a highlighted publication
     demoUrl: "https://www.youtube.com/watch?v=C0a_-AkIL6w",
+    websiteUrl: "https://superodometry.com/supermap",
     // paperUrl: "https://arxiv.org/abs/2302.13095",
     // codeUrl: "https://github.com/jsmith/robust-causal-discovery",
   },
