@@ -28,9 +28,9 @@ export const publicationData: Publication[] = [
       "Binghong Chen*, Yaru Niu*, Changwei Yao*, Zhenlong Fang*, Shangtao Li*, Revanth Krishna Senthilkumaran, Shuai Zhou, Yuemin Mao, Hao Zhang, Bingqing Chen, Chen Qiu, Eric H. Tseng, Changliu Liu, Jonathan Francis, Ding Zhao",
     videoUrl: "/egox/egox_demo.mp4",
     keywords: [
-      "Cross-embodiment learning",
+      "Cross-embodiment",
       "Learning from human data",
-      "Dexterous manipulation",
+      "DexManipulation",
     ],
     tldr:
       "EgoX unifies human and robot demonstrations in an egocentric format and pretrains a modular cross-embodiment transformer with embodiment dreaming to improve manipulation transfer across diverse robot bodies.",
