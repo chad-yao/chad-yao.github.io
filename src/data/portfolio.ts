@@ -3,6 +3,8 @@ export interface Portfolio {
   description: string;
   technologies?: string[];
   imageUrl?: string;
+  videoUrl?: string;
+  videoPosterUrl?: string;
   projectUrl?: string;
   codeUrl?: string;
   highlight?: boolean;
@@ -15,6 +17,8 @@ export const portfolioData: Portfolio[] = [
       "Learn a whole-body mobile manipulation policy using depth and Lidar sensors, without any expert demonstrations.",
     technologies: ["Robot Learning", "Mobile Manipulation", "Whole-Body Control"],
     imageUrl: "/wbc2policy/demo_preview_fast.gif",
+    videoUrl: "/wbc2policy/demo.mp4",
+    videoPosterUrl: "/wbc2policy/demo_preview_fast.gif",
     projectUrl: "/wbc2policy",
     highlight: true,
   },
@@ -24,6 +28,8 @@ export const portfolioData: Portfolio[] = [
       "Extended Shape-of-Motion with synthesized views and MHR tracking priors to improve monocular human reconstruction under fast motion, yielding more stable limbs, better foreground quality, and faster preprocessing.",
     technologies: ["Python", "Gaussian Splatting", "SAM 3D"],
     imageUrl: "/som_sambody3d/merged/motion_coefs_stacked_x2_colorfirst.gif",
+    videoUrl: "/som_sambody3d/ours/motion_coefs.mp4",
+    videoPosterUrl: "/som_sambody3d/merged/motion_coefs_stacked_x2_colorfirst.gif",
     projectUrl: "/som_sambody3d",
   },
   {

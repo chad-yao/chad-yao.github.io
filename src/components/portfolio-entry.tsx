@@ -4,6 +4,9 @@ import { Portfolio } from "@/data/portfolio";
 import { ShineBorder } from "./shine-border";
 
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
+  const mediaClassName =
+    "h-auto w-full rounded-lg transition-transform duration-500 ease-out hover:shadow-xl hover:scale-110 will-change-transform";
+
   return (
     <div className={`flex flex-col sm:flex-row gap-6 ${portfolio.highlight ? 'relative overflow-hidden bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 p-4 rounded-lg shadow-sm border border-orange-200/70 dark:border-orange-700/50' : ''}`}>
       {portfolio.highlight && (
@@ -19,16 +22,30 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
           </div>
         </>
       )}
-      {portfolio.imageUrl && (
+      {(portfolio.videoUrl || portfolio.imageUrl) && (
         <div className="w-1/4 min-w-[160px] relative overflow-visible">
-          <Image
-            src={portfolio.imageUrl}
-            alt={portfolio.title}
-            width={160}
-            height={200}
-            className="rounded-lg transition-transform duration-500 ease-out hover:shadow-xl hover:scale-110 will-change-transform"
-            unoptimized={portfolio.imageUrl.toLowerCase().endsWith('.gif')}
-          />
+          {portfolio.videoUrl ? (
+            <video
+              src={portfolio.videoUrl}
+              poster={portfolio.videoPosterUrl ?? portfolio.imageUrl}
+              aria-label={portfolio.title}
+              className={mediaClassName}
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+            />
+          ) : (
+            <Image
+              src={portfolio.imageUrl!}
+              alt={portfolio.title}
+              width={160}
+              height={200}
+              className={mediaClassName}
+              unoptimized={portfolio.imageUrl!.toLowerCase().endsWith('.gif')}
+            />
+          )}
         </div>
       )}
       <div className="flex flex-col flex-1">

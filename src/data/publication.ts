@@ -10,13 +10,33 @@ export interface Publication {
   bibtex?: string;
   tldr?: string;
   imageUrl?: string;
+  videoUrl?: string;
+  videoPosterUrl?: string;
   award?: string;
   keywords?: string[];
+  hideVenue?: boolean;
   highlight?: boolean; // Add highlight field to mark important publications
 }
 
 export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
+  {
+    year: "2026",
+    conference: "RSS Workshop Dex Submission",
+    title: "Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming",
+    authors:
+      "Binghong Chen*, Yaru Niu*, Changwei Yao*, Zhenlong Fang*, Shangtao Li*, Revanth Krishna Senthilkumaran, Shuai Zhou, Yuemin Mao, Hao Zhang, Bingqing Chen, Chen Qiu, Eric H. Tseng, Changliu Liu, Jonathan Francis, Ding Zhao",
+    videoUrl: "/egox/egox_demo.mp4",
+    keywords: [
+      "Cross-embodiment learning",
+      "Learning from human data",
+      "Dexterous manipulation",
+    ],
+    tldr:
+      "EgoX unifies human and robot demonstrations in an egocentric format and pretrains a modular cross-embodiment transformer with embodiment dreaming to improve manipulation transfer across diverse robot bodies.",
+    hideVenue: true,
+    highlight: true,
+  },
   {
     year: "2026",
     conference: "ICRA",
