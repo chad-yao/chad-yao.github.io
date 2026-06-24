@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const videoVariants = [
@@ -114,13 +115,12 @@ export default function SomSambody3DPage() {
 
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/70">
             <div className="relative">
-              <img
+              <Image
                 src="/som_sambody3d/3d_pipeline.png"
                 alt="Shape-of-Motion pipeline for monocular 4D human reconstruction"
                 width={1280}
                 height={700}
                 className="h-auto w-full"
-                suppressHydrationWarning
               />
             </div>
             <p className="border-t border-zinc-200 px-5 py-3 text-[11px] leading-relaxed text-zinc-600 dark:border-zinc-800 dark:text-zinc-400">

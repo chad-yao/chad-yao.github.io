@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const resultVideos = [
@@ -180,13 +181,12 @@ export default function Wbc2PolicyPage() {
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/70">
-            <img
+            <Image
               src="/wbc2policy/robot_platform.png"
               alt="Mobile manipulation platform with a holonomic base, Franka Panda arm, LEAP hand, and active-vision neck camera."
               width={1600}
               height={900}
               className="h-auto w-full"
-              suppressHydrationWarning
             />
             <p className="border-t border-zinc-200 px-5 py-3 text-[11px] leading-relaxed text-zinc-600 dark:border-zinc-800 dark:text-zinc-400">
               Our 32-DoF platform combines a holonomic mobile base, 7-DoF arm,
@@ -216,13 +216,12 @@ export default function Wbc2PolicyPage() {
             </p>
 
             <div className="overflow-hidden rounded-xl border border-zinc-200/70 bg-zinc-50/70 dark:border-zinc-800/80 dark:bg-zinc-900/60">
-              <img
+              <Image
                 src="/wbc2policy/fs_motion.png"
                 alt="Whole-body controller objectives including reaching, vision gaze control, and collision avoidance."
                 width={1600}
                 height={900}
                 className="h-auto w-full"
-                suppressHydrationWarning
               />
               <p className="border-t border-zinc-200 px-5 py-3 text-[11px] leading-relaxed text-zinc-600 dark:border-zinc-800 dark:text-zinc-400">
                 The controller provides geometric priors for whole-body motion,
@@ -300,13 +299,12 @@ export default function Wbc2PolicyPage() {
 
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/70">
               <div className="grid gap-0 md:grid-cols-[1.15fr_0.85fr]">
-                <img
+                <Image
                   src="/wbc2policy/depth_lidar.png"
                   alt="Point-cloud observations from onboard depth camera and LiDAR."
                   width={1600}
                   height={900}
                   className="h-full w-full object-cover"
-                  suppressHydrationWarning
                 />
                 <div className="border-t border-zinc-200 px-5 py-4 text-[11px] leading-relaxed text-zinc-600 dark:border-zinc-800 dark:text-zinc-400 md:border-l md:border-t-0 md:px-6 md:py-5">
                   During rollout generation, we additionally save depth and
@@ -330,13 +328,12 @@ export default function Wbc2PolicyPage() {
           </div>
 
         <div className="overflow-hidden rounded-xl border border-zinc-200/70 bg-zinc-50/70 dark:border-zinc-800/80 dark:bg-zinc-900/60">
-            <img
+            <Image
             src="/wbc2policy/distillation_framework.png"
             alt="Visual distillation pipeline showing teacher policy, whole-body controller, point-set abstraction, transformer encoder, and student policy."
             width={1400}
             height={900}
             className="h-auto w-full"
-            suppressHydrationWarning
             />
             <p className="border-t border-zinc-200 px-5 py-3 text-[11px] leading-relaxed text-zinc-600 dark:border-zinc-800 dark:text-zinc-400">
             Teacher rollouts from the whole-body controller and local dexterous
@@ -405,13 +402,12 @@ export default function Wbc2PolicyPage() {
                 key={figure.src}
                 className="overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/70"
               >
-                <img
+                <Image
                   src={figure.src}
                   alt={figure.alt}
                   width={1400}
                   height={900}
                   className="h-auto w-full"
-                  suppressHydrationWarning
                 />
                 <div className="border-t border-zinc-200 px-5 py-4 dark:border-zinc-800">
                   <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
