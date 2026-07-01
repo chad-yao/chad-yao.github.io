@@ -22,7 +22,7 @@ export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
   {
     year: "2026",
-    conference: "RSS Workshop Dex Submission",
+    conference: "RSS Workshop",
     title: "Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming",
     authors:
       "Binghong Chen*, Yaru Niu*, Changwei Yao*, Zhenlong Fang*, Shangtao Li*, Revanth Krishna Senthilkumaran, Shuai Zhou, Yuemin Mao, Hao Zhang, Bingqing Chen, Chen Qiu, Eric H. Tseng, Changliu Liu, Jonathan Francis, Ding Zhao",
@@ -32,9 +32,10 @@ export const publicationData: Publication[] = [
       "Learning from human data",
       "DexManipulation",
     ],
-    tldr:
-      "EgoX unifies human and robot demonstrations in an egocentric format and pretrains a modular cross-embodiment transformer with embodiment dreaming to improve manipulation transfer across diverse robot bodies.",
-    hideVenue: true,
+    // paperUrl: "https://arxiv.org/pdf/2509.16136",
+    // tldr:
+    //   "EgoX unifies human and robot demonstrations in an egocentric format and pretrains a modular cross-embodiment transformer with embodiment dreaming to improve manipulation transfer across diverse robot bodies.",
+    // hideVenue: true,
     highlight: true,
   },
   {

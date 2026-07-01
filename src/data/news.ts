@@ -8,6 +8,13 @@ export interface News {
 export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
+    date: "Jul. 2026",
+    title: "🎉 EgoX Accepted by RSS Workshop on Dexterous Manipulation",
+    description:
+      "Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming was accepted to the 4th Workshop on Dexterous Manipulation: Scalable Learning for Human-Level Skills.",
+    link: "",
+  },
+  {
     date: "May 2026",
     title: "⭐ Selected Demo for Jensen Huang Visit",
     description:
