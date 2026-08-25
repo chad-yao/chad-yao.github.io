@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.chad-yao.com',
     siteName: aboutMe.name,
     title: customMetadata.title || aboutMe.name,
     description: customMetadata.description || aboutMe.description.replace(/<[^>]*>/g, ''),
@@ -52,9 +51,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   metadataBase: new URL('https://www.chad-yao.com'),
-  alternates: {
-    canonical: 'https://www.chad-yao.com',
-  },
 };
 
 export default function RootLayout({

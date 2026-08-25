@@ -59,6 +59,11 @@ export function ModernNavigation({ sections }: ModernNavigationProps) {
         };
       }).filter(item => item.element);
 
+      if (sectionElements.length === 0) {
+        setActiveSection(null);
+        return;
+      }
+
       // Find the section that is currently in view with more lenient detection
       let currentSection: Section | null = null;
       

@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "WeChat | Changwei Yao",
+  description: "WeChat contact QR code for Changwei Yao.",
+  alternates: {
+    canonical: "/wechat",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function WechatQRPage() {
   return (

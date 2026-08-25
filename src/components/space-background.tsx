@@ -11,6 +11,7 @@ export function SpaceBackground() {
     const mountNode = mountRef.current;
     if (!mountNode) return;
 
+    try {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
@@ -396,6 +397,14 @@ export function SpaceBackground() {
       }
       renderer.dispose();
     };
+    } catch (error) {
+      // WebGL is unavailable in some browsers, crawlers, remote desktops, and
+      // battery-saving modes. The background is decorative, so the page should
+      // remain usable when Three.js cannot create or initialize a renderer.
+      console.warn("Space background disabled because WebGL is unavailable.", error);
+      mountNode.replaceChildren();
+      return;
+    }
   }, []);
 
   return (

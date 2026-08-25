@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { EducationEntry } from "@/components/education-entry";
 import { educationData } from "@/data/education";
 import { PublicationSection } from "@/components/publication-section";
@@ -14,6 +15,15 @@ import { sectionOrder, Section } from "@/data/section-order";
 import { ClientOnly } from "@/components/client-only";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ModernNavigation } from "@/components/modern-navigation";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+  },
+};
 
 export default function Home() {
   return (
