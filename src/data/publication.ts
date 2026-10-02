@@ -14,6 +14,7 @@ export interface Publication {
   videoPosterUrl?: string;
   award?: string;
   keywords?: string[];
+  workshops?: { name: string; url: string }[];
   hideVenue?: boolean;
   highlight?: boolean; // Add highlight field to mark important publications
 }
@@ -22,17 +23,28 @@ export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
   {
     year: "2026",
-    conference: "RSS Workshop",
+    conference: "RSS & IROS Workshop",
+    workshops: [
+      {
+        name: "Dexterous Manipulation: Scalable Learning for Human-Level Skills",
+        url: "https://dex-manipulation.github.io/rss2026/",
+      },
+      {
+        name: "Physical World Models for Scaling Embodied AI",
+        url: "https://physical-world-models.github.io/IROS2026/",
+      },
+    ],
     title: "Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming",
     authors:
-      "Binghong Chen*, Yaru Niu*, Changwei Yao*, Zhenlong Fang*, Shangtao Li*, Revanth Krishna Senthilkumaran, Shuai Zhou, Yuemin Mao, Hao Zhang, Bingqing Chen, Chen Qiu, Eric H. Tseng, Changliu Liu, Jonathan Francis, Ding Zhao",
+      "Binghong Chen*, Yaru Niu*, Changwei Yao*, Shangtao Li*, Zhenlong Fang, Revanth Krishna Senthilkumaran, Shuai Zhou, Yuemin Mao, Yudong Luo, Peiqi Yu, Hao Zhang, Bingqing Chen, Chen Qiu, Eric H. Tseng, Changliu Liu, Jonathan Francis, Ding Zhao",
     videoUrl: "/egox/egox_demo.mp4",
+    paperUrl: "https://openreview.net/pdf?id=tyY2DTob8s",
     keywords: [
       "Cross-embodiment",
       "Learning from human data",
       "DexManipulation",
     ],
-    // paperUrl: "https://arxiv.org/pdf/2509.16136",
+    award: "Oral Presentation; Outstanding Paper Award",
     // tldr:
     //   "EgoX unifies human and robot demonstrations in an egocentric format and pretrains a modular cross-embodiment transformer with embodiment dreaming to improve manipulation transfer across diverse robot bodies.",
     // hideVenue: true,

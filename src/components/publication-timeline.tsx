@@ -144,6 +144,21 @@ export function PublicationTimeline({ publications }: PublicationTimelineProps) 
                                 </span>
                               )}
                             </div>
+                            {publication.workshops && publication.workshops.length > 0 && (
+                              <div className="mb-3 space-y-1">
+                                {publication.workshops.map((workshop) => (
+                                  <a
+                                    key={workshop.url}
+                                    href={workshop.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
+                                  >
+                                    {workshop.name} ↗
+                                  </a>
+                                ))}
+                              </div>
+                            )}
                             <h4 className="font-serif text-base text-zinc-900 dark:text-zinc-100 mb-2">
                               {publication.title}
                             </h4>

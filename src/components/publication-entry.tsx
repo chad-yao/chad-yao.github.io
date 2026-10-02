@@ -63,21 +63,36 @@ export function PublicationEntry({
         </div>
       )}
       <div className="flex flex-col flex-1">
-        <div className="flex flex-row gap-4 items-center mb-2">
+        <div className="flex flex-wrap gap-3 items-center justify-between mb-3">
           {!publication.hideVenue && (
-            <p className="text-xs text-zinc-500 dark:text-zinc-500">
+            <p className="text-[11px] font-medium tracking-wide text-zinc-500 dark:text-zinc-400">
               {publication.conference} {publication.year}
             </p>
           )}
           {publication.award && (
-            <div className="group flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 rounded-md items-center shadow-md border border-amber-100/50 relative overflow-hidden hover:rotate-1 transition-all duration-300">
-              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/90 to-transparent" />
-              <p className="text-xs text-amber-700 font-medium relative">
+            <div className="flex px-2.5 py-1.5 bg-amber-50 dark:bg-amber-900/20 rounded-md items-center border border-amber-200/70 dark:border-amber-700/50">
+              <p className="text-[11px] leading-snug text-amber-800 dark:text-amber-300 font-medium">
                 {publication.award}
               </p>
             </div>
           )}
         </div>
+        {publication.workshops && publication.workshops.length > 0 && (
+          <div className="mb-3 space-y-1.5">
+            {publication.workshops.map((workshop) => (
+              <a
+                key={workshop.url}
+                href={workshop.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-start gap-2 border-l-2 border-zinc-200 dark:border-zinc-700 pl-2.5 text-[11px] leading-snug text-zinc-500 dark:text-zinc-400 hover:border-orange-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+              >
+                <span>{workshop.name}</span>
+                <ArrowUpRight size={12} className="mt-0.5 shrink-0 opacity-60 group-hover:opacity-100" />
+              </a>
+            ))}
+          </div>
+        )}
         <h3 className="font-serif text-md mb-3 text-zinc-900 dark:text-zinc-100">{publication.title}</h3>
         <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">{publication.authors}</p>
         <div className="flex flex-row gap-6">
