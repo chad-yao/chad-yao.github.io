@@ -79,14 +79,14 @@ export const publicationData: Publication[] = [
   {
     year: "2026",
     conference: "RSS",
-    title: "SuperMap: Spatio Temporal Semantic SLAM Enabling Robots to Understand Evolving World in Real Time",
+    title: "SuperMap: A Spatio-Temporal SLAM System for Visual-Language Navigation",
     authors: "Shibo Zhao, Guofei Chen, Honghao Zhu, Zhiheng Li, Changwei Yao, Nader Zantout, Seungchan Kim, Wenshan Wang, Ji Zhang, Sebastian Scherer",
     imageUrl: "/images/supermap.GIF",
     keywords: ["System", "Scene Graph", "Spatio-temporal"],
     highlight: true, // Mark this as a highlighted publication
     demoUrl: "https://www.youtube.com/watch?v=C0a_-AkIL6w",
     websiteUrl: "https://superodometry.com/supermap",
-    // paperUrl: "https://arxiv.org/abs/2302.13095",
+    paperUrl: "https://arxiv.org/pdf/2608.22896v1",
     // codeUrl: "https://github.com/jsmith/robust-causal-discovery",
   },
 ];
